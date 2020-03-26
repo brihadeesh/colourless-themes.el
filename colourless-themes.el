@@ -55,7 +55,7 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
      (custom-theme-set-faces
       ',name
       '(default ((t (:background ,bg :foreground ,fg))))
-      '(cursor ((t (:background ,fg+ :foreground ,fg+))))
+      '(cursor ((t (:background ,fg+ :foreground ,fg))))
       '(mode-line ((t (:background ,fade))))
       '(mode-line-inactive ((t ())))
       '(isearch ((t (:weight bold :background ,green :foreground ,bg))))
