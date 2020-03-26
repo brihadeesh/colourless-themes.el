@@ -18,7 +18,7 @@
 ;; Author: Thomas Letan <contact@thomasletan.fr>
 ;; URL: https://git.sr.ht/~lthms/colorless-themes.el
 ;; Version: 0.2
-;; Package-Requires: ((colorless-themes "0.1"))
+;; Package-Requires: ((colourless-themes "0.1"))
 ;; License: GPL-3
 ;; Keywords: faces theme
 
@@ -28,11 +28,11 @@
 ;; https://github.com/emacsfodder/emacs-lavender-theme/
 
 ;;; Code:
-(require 'colorless-themes)
+(require 'colourless-themes)
 
-(deftheme broceliande "A mostly colorless greeny theme")
+(deftheme broceliande "A mostly colourless greeny theme")
 
-(colorless-themes-make broceliande
+(colourless-themes-make broceliande
                        "#001c1c"    ; bg
                        "#294040"    ; bg+
                        "#142e2e"    ; current-line

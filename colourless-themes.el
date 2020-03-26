@@ -1,6 +1,7 @@
-;;; colorless-themes.el --- A macro to generate mostly colorless themes
+;;; colourless-themes.el --- A macro to generate mostly colorless themes
 
 ;; Copyright (C) 2018–2020 Thomas Letan
+;; Copyright (C) 2020 Brihadeesh S
 ;;
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -15,8 +16,8 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-;; Author: Thomas Letan <contact@thomasletan.fr>
-;; URL: https://git.sr.ht/~lthms/colorless-themes.el
+;; Author: Brihadeesh S <brihadeesh@protonmail.com>
+;; URL: https://gitlab.com/peregrinator/colourless-themes.el
 ;; Package-Requires: ((emacs "24.1"))
 ;; Version: 0.2
 ;; License: GPL-3
@@ -24,10 +25,10 @@
 
 ;;; Commentary:
 
-;; colorless-themes generalizes nordless-theme, a minimalist theme inspired by
-;; nofrils[1], an extremely minimalist colorscheme for vim, and nord[2], a
-;; north-bluish color palette.  More precisely, it provides a macro called
-;; `colorless-themes-make' to easily derive new “mostly colorless” themes.
+;; colourless-themes generalizes nordless-theme, a minimalist theme inspired by
+;; nofrils[1], an extremely minimalist colourscheme for vim, and nord[2], a
+;; north-bluish colour palette.  More precisely, it provides a macro called
+;; `colorless-themes-make' to easily derive new “mostly colourless” themes.
 ;;
 ;; [1]: https://github.com/robertmeta/nofrils
 ;; [2]: https://github.com/arcticicestudio/nord
@@ -36,13 +37,13 @@
 
 ;; -*- lexical-binding: t -*-
 
-(defmacro colorless-themes-make (name bg bg+ current-line fade fg fg+ docs red orange yellow green)
+(defmacro colourless-themes-make (name bg bg+ current-line fade fg fg+ docs red orange yellow green)
   "A generic macro to create new themes.
 
-Using this macro, it only takes minutes to write a new colorless theme.  To
-create the theme NAME, you need to supply 12 different colors.  The three
-primary colors are BG, FG and DOCS.  They together form the identity of the
-newly created theme.  CURRENT-LINE is the background color of, well, the current
+Using this macro, it only takes minutes to write a new colourless theme.  To
+create the theme NAME, you need to supply 12 different colours.  The three
+primary colours are BG, FG and DOCS.  They together form the identity of the
+newly created theme.  CURRENT-LINE is the background colour of, well, the current
 line.  BG+ is notably being used in the modline.  FADE is used for whitespace
 characters.  FG+ is used in the cursor and the company tooltip.  Finally, RED,
 ORANGE, YELLOW and GREEN are pretty self-explanatory."
@@ -54,7 +55,7 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
      (custom-theme-set-faces
       ',name
       '(default ((t (:background ,bg :foreground ,fg))))
-      '(cursor ((t (:background ,fg+ :foreground ,bg+))))
+      '(cursor ((t (:background ,fg+ :foreground ,fg+))))
       '(mode-line ((t (:background ,fade))))
       '(mode-line-inactive ((t ())))
       '(isearch ((t (:weight bold :background ,green :foreground ,bg))))
@@ -62,7 +63,7 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(evil-ex-substitute-matches ((t (:weight bold :strike-through t :foreground ,red))))
       '(evil-ex-substitute-replacement ((t (:weight bold :foreground ,green))))
       '(powerline-active1 ((t (:background ,bg))))
-      '(powerline-active2 ((t (:background ,bg+))))
+      '(powerline-active2 ((t (:background ,bg))))
       '(powerline-inactive1 ((t (:background ,fade))))
       '(powerline-inactive2 ((t (:background ,fade))))
       '(link ((t (:underline ,docs))))
@@ -94,12 +95,12 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(compilation-line-number ((t ())))
       '(compilation-mode-line-exit ((t (:foreground ,green))))
       '(compilation-mode-line-fail ((t (:foreground ,red))))
-      '(match ((t (:foreground ,docs :background ,current-line))))
+      '(match ((t (:foreground ,docs :background ,fg+))))
       '(linum ((t (:foreground ,fade))))
-      '(line-number ((t (:foreground ,fade :height 0.8))))
-      '(line-number-current-line ((t (:foreground ,fg :height 0.8))))
+      '(line-number ((t (:foreground ,docs :height 0.9))))
+      '(line-number-current-line ((t (:foreground ,fg))))
       '(hl-line ((t (:background ,current-line))))
-      '(show-paren-match ((t (:foreground ,docs :weight bold))))
+      '(show-paren-match ((t (:foreground ,green :weight bold))))
       '(show-paren-mismatch ((t (:foreground ,red :weight bold))))
       '(hl-paren-face ((t (:foreground ,docs :weight bold))))
       '(dired-directory ((t (:weight bold))))
@@ -113,22 +114,22 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(rst-level-6 ((t (:weight bold))))
       '(org-document-title ((t (:weight bold))))
       '(org-footnote ((t ())))
-      '(org-level-1 ((t (:foreground ,docs :weight bold))))
-      '(org-level-2 ((t (:foreground ,docs :weight bold))))
-      '(org-level-3 ((t (:foreground ,docs :weight bold))))
-      '(org-level-4 ((t (:foreground ,docs :weight bold))))
-      '(org-level-5 ((t (:foreground ,docs :weight bold))))
-      '(org-level-6 ((t (:foreground ,docs :weight bold))))
-      '(org-level-7 ((t (:foreground ,docs :weight bold))))
-      '(org-level-8 ((t (:foreground ,docs :weight bold))))
+      '(org-level-1 ((t (:foreground ,fg :weight bold))))
+      '(org-level-2 ((t (:foreground ,fg :weight bold))))
+      '(org-level-3 ((t (:foreground ,fg :weight bold))))
+      '(org-level-4 ((t (:foreground ,fg :weight bold))))
+      '(org-level-5 ((t (:foreground ,fg+ :weight bold))))
+      '(org-level-6 ((t (:foreground ,fg+ :weight bold))))
+      '(org-level-7 ((t (:foreground ,fg+ :weight bold))))
+      '(org-level-8 ((t (:foreground ,fg+ :weight bold))))
       '(org-date ((t ())))
       '(org-tag ((t (:foreground ,docs))))
       '(org-todo ((t (:foreground ,yellow))))
       '(org-done ((t (:foreground ,green))))
       '(org-block ((t ())))
-      '(org-block-begin-line ((t (:foreground ,fg+ :height 0.8))))
-      '(org-block-end-line ((t (:foreground ,fg+ :height 0.8))))
-      '(org-meta-line ((t (:foreground ,fg+ :height 0.8))))
+      '(org-block-begin-line ((t (:foreground ,fg+ :height 0.9))))
+      '(org-block-end-line ((t (:foreground ,fg+ :height 0.9))))
+      '(org-meta-line ((t (:foreground ,fg+ :height 0.9))))
       '(org-document-info-keyword ((t ())))
       '(org-document-info ((t ())))
       '(persp-selected-face ((t (:weight bold))))
@@ -194,12 +195,12 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(diff-refine-added ((t (:foreground ,bg :background ,green))))
       '(diff-refine-removed ((t (:foreground ,bg :background ,red))))
       '(markdown-header-delimiter-face ((t (:foreground ,docs :weight bold))))
-      '(markdown-header-face-1 ((t (:foreground ,docs :weight bold))))
-      '(markdown-header-face-2 ((t (:foreground ,docs :weight bold))))
-      '(markdown-header-face-3 ((t (:foreground ,docs :weight bold))))
-      '(markdown-header-face-4 ((t (:foreground ,docs :weight bold))))
-      '(markdown-header-face-5 ((t (:foreground ,docs :weight bold))))
-      '(markdown-header-face-6 ((t (:foreground ,docs :weight bold))))
+      '(markdown-header-face-1 ((t (:foreground ,fg :weight bold))))
+      '(markdown-header-face-2 ((t (:foreground ,fg :weight bold))))
+      '(markdown-header-face-3 ((t (:foreground ,fg :weight bold))))
+      '(markdown-header-face-4 ((t (:foreground ,fg+ :weight bold))))
+      '(markdown-header-face-5 ((t (:foreground ,fg+ :weight bold))))
+      '(markdown-header-face-6 ((t (:foreground ,fg+ :weight bold))))
       '(markdown-markup-face ((t ())))
       '(markdown-bold-face ((t (:weight bold))))
       '(markdown-italic-face ((t (:italic t))))
@@ -256,7 +257,7 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(centaur-tabs-active-bar-face ((t (:background ,docs))))
       '(focus-unfocused ((t (:foreground ,fade)))))))
 
-(defmacro colorless-themes-load-theme (theme)
+(defmacro colourless-themes-load-theme (theme)
   "Load the theme THEME."
   `(if (daemonp)
        (add-hook 'after-make-frame-functions
@@ -265,5 +266,5 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
                    (load-theme ,theme t)))
      (load-theme ,theme t)))
 
-(provide 'colorless-themes)
-;;; colorless-themes.el ends here
+(provide 'colourless-themes)
+;;; colourless-themes.el ends here

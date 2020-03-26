@@ -29,11 +29,11 @@
 ;; https://github.com/robertmeta/nofrils
 
 ;;; Code:
-(require 'colorless-themes)
+(require 'colourless-themes)
 
 (deftheme einkless "A colorless port of eink-theme")
 
-(colorless-themes-make einkless
+(colourless-themes-make einkless
                        "#fefef0"    ; bg
                        "#e3e3da"    ; bg+
                        "#eeeee0"    ; current-line
