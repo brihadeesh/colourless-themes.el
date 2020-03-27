@@ -57,7 +57,7 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(default ((t (:background ,bg :foreground ,fg))))
       '(cursor ((t (:background ,fg+ :foreground ,fg))))
       '(mode-line ((t (:background ,fade))))
-      '(mode-line-inactive ((t (:background ,docs))))
+      '(mode-line-inactive ((t ())))
       '(isearch ((t (:weight bold :background ,green :foreground ,bg))))
       '(lazy-highlight ((t (:weight bold :background ,current-line :foreground ,green))))
       '(evil-ex-substitute-matches ((t (:weight bold :strike-through t :foreground ,red))))
