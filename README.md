@@ -59,12 +59,13 @@ Currently, this repository features:
 
 Additionally check out other themes I've made with this macro:
 
-- `beelzebub`, a dark, purplish colourscheme based on Stanislav Karkavin's
-[vim-beelzebub](https://github.com/xdefrag/vim-beelzebub):
-[beelzebub.el](https://gitlab.com/peregrinator/beelzebub.el).
-- `mephistopheles`, a dark theme with yellow and green foreground, again
-  inspired by Stanislav Karkavin's vim theme mentioned above:
-  [mephistopheles.el](https://gitlab.com/peregrinator/mephistopheles.el)
+- [`beelzebub`](https://gitlab.com/peregrinator/beelzebub.el), a dark, purplish
+  colourscheme based on Stanislav Karkavin's vim theme:
+  [vim-beelzebub](https://github.com/xdefrag/vim-beelzebub).
+- [`mephistopheles`](https://gitlab.com/peregrinator/mephistopheles.el), a dark
+  theme with yellow and green foreground, again inspired by Stanislav Karkavin's
+  vim theme mentioned above.
+  
 
 If you want to report an issue, propose a patch to fix a glitch, or even propose
 new themes, feel free to do by sending an email to the [`colorless-dev` mailing
