@@ -7,9 +7,9 @@
 
 ## Installation
 
-Install this however you would install a package from github - this varies with
-the flavour of Emacs in use. If you use doom-emacs like I do, add this line in
-your `packages.el`:
+Install this how you would install a package from github - this varies with the
+flavour of Emacs in use. If you use doom-emacs like I do, add this line in your
+`packages.el`: 
 
 ``` emacs-lisp
 (package! colourless-themes :recipe
