@@ -67,6 +67,3 @@ Additionally check out other themes I've made with this macro:
   vim theme mentioned above.
   
 
-If you want to report an issue, propose a patch to fix a glitch, or even propose
-new themes, feel free to do by sending an email to the [`colorless-dev` mailing
-list](mailto:~lthms/colorless-dev@lists.sr.ht).
