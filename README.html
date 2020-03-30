@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"/>
+<link rel="stylesheet" type="text/css" media="all" href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css"  />
+<link rel="stylesheet" type="text/css" media="all" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/github.min.css"  /><meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'><style> body { box-sizing: border-box; max-width: 740px; width: 100%; margin: 40px auto; padding: 0 10px; } </style><script src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js'></script><script>document.addEventListener('DOMContentLoaded', () => { document.body.classList.add('markdown-body'); document.querySelectorAll('pre[lang] > code').forEach((code) => { code.classList.add(code.parentElement.lang); }); document.querySelectorAll('pre > code').forEach((code) => { hljs.highlightBlock(code); }); });</script>
+</head>
+
+<body>
+
+<h1 id="colourless-themes">colourless-themes</h1>
+<p><code>colourless-themes</code> is a collection of “primarily colourless themes&quot;.</p>
+<h2 id="screenshots">Screenshots</h2>
+<p><em>WIP</em></p>
+<h2 id="installation">Installation</h2>
+<p>Install this however you would install a package from github - this varies with<br>the flavour of Emacs in use. If you use doom-emacs like I do, add this line in<br>your <code>packages.el</code>:</p>
+<pre><code class="language-emacs-lisp">(package! colourless-themes :recipe
+  (:host github
+   :repo &quot;peregrinat0r/colourless-themes.el&quot;))</code></pre>
+<p>Then just run the <code>doom/reload</code> command from within doom-emacs or from a<br>terminal run:</p>
+<pre><code class="language-sh">$EMACSDIR/bin/doom sync</code></pre>
+<p>Remember to restart Emacs after this.</p>
+<h2 id="usage">Usage</h2>
+<p>For doom-emacs, load any theme from this repo by updating your <code>config.el</code> thus:</p>
+<pre><code class="language-emacs-lisp"># this line usually exists so just modify the theme name
+(setq doom-theme &#39;nordless)</code></pre>
+<p>or temporarily set it using the <code>load-theme</code> command for doom-emacs, or the<br><code>customize-themes</code> for vanilla Emacs.</p>
+<p>Currently, this repository features:</p>
+<ul>
+<li><code>nordless</code>, dark and blue, inspired by<br><a href="https://github.com/arcticicestudio/nord">nord</a></li>
+<li><code>hydrangealess</code>, dark and magenta, inspired by<br><a href="https://github.com/yuttie/hydrangea-emacs">hydrangea</a></li>
+<li><code>seagreenless</code>, light and seagreen</li>
+<li><code>lavenderless</code>, purple and mint, inspired by<br><a href="https://github.com/emacsfodder/emacs-lavender-theme/">Lavender</a></li>
+<li><code>nofrils-darkless</code>, a clone of<br><a href="https://github.com/robertmeta/nofrils">nofrils-dark</a></li>
+<li><code>darkless</code>, dark and white, inspired by nofrils, but with less<br>colours</li>
+<li><code>chocolateless</code>, chocolate taste, inspired by<br><a href="https://github.com/SavchenkoValeriy/emacs-chocolate-theme">chocolate</a></li>
+<li><code>einkless</code>, light theme, inspired by<br><a href="https://github.com/maio/eink-emacs">eink</a></li>
+<li><code>broceliande</code>, green and cyan</li>
+</ul>
+<p>Additionally check out other themes I&#39;ve made with this macro:</p>
+<ul>
+<li><code>beelzebub</code>, a dark, purplish colourscheme based on Stanislav Karkavin&#39;s<br><a href="https://github.com/xdefrag/vim-beelzebub">vim-beelzebub</a>:<br><a href="https://gitlab.com/peregrinator/beelzebub.el">beelzebub.el</a>.</li>
+<li><code>mephistopheles</code>, a dark theme with yellow and green foreground, again<br>inspired by Stanislav Karkavin&#39;s vim theme mentioned above:<br><a href="https://gitlab.com/peregrinator/mephistopheles.el">mephistopheles.el</a></li>
+</ul>
+<p>If you want to report an issue, propose a patch to fix a glitch, or even propose<br>new themes, feel free to do by sending an email to the <a href="mailto:~lthms/colorless-dev@lists.sr.ht"><code>colorless-dev</code> mailing<br>list</a>.</p>
+
+
+</body>
+</html>

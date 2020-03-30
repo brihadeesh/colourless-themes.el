@@ -2,6 +2,8 @@
 
 `colourless-themes` is a collection of “primarily colourless themes".
 
+## Screenshots 
+*WIP*
 
 ## Installation
 
@@ -54,6 +56,15 @@ Currently, this repository features:
 - `einkless`, light theme, inspired by
   [eink](https://github.com/maio/eink-emacs)
 - `broceliande`, green and cyan
+
+Additionally check out other themes I've made with this macro:
+
+- `beelzebub`, a dark, purplish colourscheme based on Stanislav Karkavin's
+[vim-beelzebub](https://github.com/xdefrag/vim-beelzebub):
+[beelzebub.el](https://gitlab.com/peregrinator/beelzebub.el).
+- `mephistopheles`, a dark theme with yellow and green foreground, again
+  inspired by Stanislav Karkavin's vim theme mentioned above:
+  [mephistopheles.el](https://gitlab.com/peregrinator/mephistopheles.el)
 
 If you want to report an issue, propose a patch to fix a glitch, or even propose
 new themes, feel free to do by sending an email to the [`colorless-dev` mailing
