@@ -18,7 +18,7 @@
 ;; Author: Thomas Letan <contact@thomasletan.fr>
 ;; URL: https://git.sr.ht/~lthms/colorless-themes.el
 ;; Version: 0.2
-;; Package-Requires: ((colorless-themes "0.1"))
+;; Package-Requires: ((colourless-themes "0.2"))
 ;; License: GPL-3
 ;; Keywords: faces theme
 
@@ -29,11 +29,11 @@
 ;; https://github.com/robertmeta/nofrils
 
 ;;; Code:
-(require 'colorless-themes)
+(require 'colourless-themes)
 
-(deftheme nofrils-darkless "A colorless port of the vim nofrils-dark theme")
+(deftheme nofrils-darkless "A colourless port of the vim nofrils-dark theme")
 
-(colorless-themes-make nofrils-darkless
+(colourless-themes-make nofrils-darkless
                        "#262626"    ; bg
                        "#000000"    ; bg+
                        "#404040"    ; current-line

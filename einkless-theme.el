@@ -18,7 +18,7 @@
 ;; Author: Thomas Letan <contact@thomasletan.fr>
 ;; URL: https://git.sr.ht/~lthms/colorless-themes.el
 ;; Version: 0.2
-;; Package-Requires: ((colorless-themes "0.1"))
+;; Package-Requires: ((colourless-themes "0.2"))
 ;; License: GPL-3
 ;; Keywords: faces theme
 
@@ -31,7 +31,7 @@
 ;;; Code:
 (require 'colourless-themes)
 
-(deftheme einkless "A colorless port of eink-theme")
+(deftheme einkless "A colourless port of eink-theme")
 
 (colourless-themes-make einkless
                        "#fefef0"    ; bg

@@ -1,7 +1,40 @@
-# colorless-themes
+# colourless-themes
 
-`colorless-themes` is a collection of “mostly colorless themes.” They are
-distributed under the terms of the GPL-3.0.
+`colourless-themes` is a collection of “primarily colourless themes".
+
+
+## Installation
+
+Install this however you would install a package from github - this varies with
+the flavour of Emacs in use. If you use doom-emacs like I do, add this line in
+your `packages.el`:
+
+``` emacs-lisp
+(package! colourless-themes :recipe
+  (:host github
+   :repo "peregrinat0r/colourless-themes.el"))
+```
+
+Then just run the `doom/reload` command from within doom-emacs or from a
+terminal run:
+
+``` sh
+$EMACSDIR/bin/doom sync
+```
+
+Remember to restart Emacs after this.
+
+## Usage
+
+For doom-emacs, load any theme from this repo by updating your `config.el` thus:
+
+``` emacs-lisp
+# this line usually exists so just modify the theme name
+(setq doom-theme 'nordless)
+```
+
+or temporarily set it using the `load-theme` command for doom-emacs, or the
+`customize-themes` for vanilla Emacs.
 
 Currently, this repository features:
 

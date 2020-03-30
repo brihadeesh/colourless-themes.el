@@ -18,7 +18,7 @@
 ;; Author: Thomas Letan <contact@thomasletan.fr>
 ;; URL: https://git.sr.ht/~lthms/colorless-themes.el
 ;; Version: 0.2
-;; Package-Requires: ((colorless-themes "0.1"))
+;; Package-Requires: ((colourless-themes "0.2"))
 ;; License: GPL-3
 ;; Keywords: faces theme
 
@@ -31,11 +31,11 @@
 ;; [2]: https://github.com/arcticicestudio/nord
 
 ;;; Code:
-(require 'colorless-themes)
+(require 'colourless-themes)
 
-(deftheme nordless "A mostly colorless version of nord-theme")
+(deftheme nordless "A mostly colourless version of nord-theme")
 
-(colorless-themes-make nordless
+(colourless-themes-make nordless
                        "#2E3440"    ; bg
                        "#3B4252"    ; bg+
                        "#434C5E"    ; current-line

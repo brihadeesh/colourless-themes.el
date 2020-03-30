@@ -18,7 +18,7 @@
 ;; Author: Thomas Letan <contact@thomasletan.fr>
 ;; URL: https://git.sr.ht/~lthms/colorless-themes.el
 ;; Version: 0.2
-;; Package-Requires: ((colorless-themes "0.1"))
+;; Package-Requires: ((colourless-themes "0.2"))
 ;; License: GPL-3
 ;; Keywords: faces theme
 
@@ -29,11 +29,11 @@
 ;; https://github.com/robertmeta/nofrils
 
 ;;; Code:
-(require 'colorless-themes)
+(require 'colourless-themes)
 
-(deftheme darkless "A colorless, gray theme")
+(deftheme darkless "A colourless, gray theme")
 
-(colorless-themes-make darkless
+(colourless-themes-make darkless
                        "#2D2A2E"    ; bg
                        "#1F1E1E"    ; bg+
                        "#403E41"    ; current-line

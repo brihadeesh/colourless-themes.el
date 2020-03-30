@@ -18,7 +18,7 @@
 ;; Author: Thomas Letan <contact@thomasletan.fr>
 ;; URL: https://git.sr.ht/~lthms/colorless-themes.el
 ;; Version: 0.2
-;; Package-Requires: ((colorless-themes "0.1"))
+;; Package-Requires: ((colourless-themes "0.2"))
 ;; License: GPL-3
 ;; Keywords: faces theme
 
@@ -28,11 +28,11 @@
 ;; https://github.com/yuttie/hydrangea-emacs
 
 ;;; Code:
-(require 'colorless-themes)
+(require 'colourless-themes)
 
-(deftheme hydrangealess "A mostly colorless version of hydrangea-theme")
+(deftheme hydrangealess "A mostly colourless version of hydrangea-theme")
 
-(colorless-themes-make hydrangealess
+(colourless-themes-make hydrangealess
                        "#1e222c"    ; bg
                        "#363a44"    ; bg+
                        "#2a303b"    ; current-line
