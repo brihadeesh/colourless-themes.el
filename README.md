@@ -65,5 +65,6 @@ Additionally check out other themes I've made with this macro:
 - [`mephistopheles`](https://gitlab.com/peregrinator/mephistopheles.el), a dark
   theme with yellow and green foreground, again inspired by Stanislav Karkavin's
   vim theme mentioned above.
-  
-
+- [`nofrils`](https://gitlab.com/peregrinator/nofrils.el), Emacs ports "faithful"
+  to the [original nofrils themes](https://github.com/robertmeta/nofrils). These
+  have a few more colours than the others. *This is work in progress!*
