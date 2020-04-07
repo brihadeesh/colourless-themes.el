@@ -255,7 +255,16 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(centaur-tabs-selected ((t (:background ,bg :foreground ,fg))))
       '(centaur-tabs-selected-modified ((t (:background ,bg :foreground ,fg))))
       '(centaur-tabs-active-bar-face ((t (:background ,docs))))
-      '(focus-unfocused ((t (:foreground ,fade)))))))
+      '(focus-unfocused ((t (:foreground ,fade))))
+      '(vterm ((t (:foreground ,fg))))
+      '(vterm-color-black   ((t (:foreground ,docs))))
+      '(vterm-color-red     ((t (:foreground ,fg))))
+      '(vterm-color-green   ((t (:foreground ,fg))))
+      '(vterm-color-yellow  ((t (:foreground ,fg))))
+      '(vterm-color-blue    ((t (:foreground ,docs))))
+      '(vterm-color-magenta ((t (:foreground ,fg))))
+      '(vterm-color-cyan    ((t (:foreground ,fg))))
+      '(vterm-color-white   ((t (:foreground ,docs)))))))
 
 (defmacro colourless-themes-load-theme (theme)
   "Load the theme THEME."
