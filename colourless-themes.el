@@ -53,11 +53,16 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(fci-rule-color ,fade))
 
      (custom-theme-set-faces
+      ;; basic
       ',name
       '(default ((t (:background ,bg :foreground ,fg))))
       '(cursor ((t (:background ,fg+ :foreground ,fg))))
+
+      ;; modeline
       '(mode-line ((t (:background ,fade))))
       '(mode-line-inactive ((t ())))
+
+      ;; basic II
       '(isearch ((t (:weight bold :background ,green :foreground ,bg))))
       '(lazy-highlight ((t (:weight bold :background ,current-line :foreground ,green))))
       '(evil-ex-substitute-matches ((t (:weight bold :strike-through t :foreground ,red))))
@@ -72,6 +77,8 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(shadow ((t ())))
       '(region ((t (:background ,fg :foreground ,bg))))
       '(escape-glyph ((t ())))
+
+      ;; font-lock
       '(font-lock-warning-face ((t ())))
       '(font-lock-negation-char-face ((t ())))
       '(font-lock-regexp-grouping-backslash ((t ())))
@@ -80,14 +87,16 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(minibuffer-prompt ((t ())))
       '(font-lock-constant-face ((t ())))
       '(font-lock-keyword-face ((t ())))
-      '(font-lock-function-name-face ((t ())))
+      '(font-lock-function-name-face ((t (:weight bold))))
       '(font-lock-variable-name-face ((t ())))
       '(font-lock-preprocessor-face ((t ())))
       '(font-lock-type-face ((t ())))
       '(font-lock-comment-delimiter-face ((t (:foreground ,docs))))
       '(font-lock-comment-face ((t (:foreground ,docs))))
       '(font-lock-doc-face ((t (:foreground ,docs))))
-      '(font-lock-string-face ((t (:weight bold :background ,bg+))))
+      '(font-lock-string-face ((t (:foreground ,fg+ :background ,bg+))))
+
+      ;; basic III
       '(whitespace-space ((t (:foreground ,fade))))
       '(whitespace-tab ((t (:foreground ,fade))))
       '(whitespace-newline ((t (:foreground ,fade))))
@@ -103,28 +112,34 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(show-paren-match ((t (:foreground ,green :weight bold))))
       '(show-paren-mismatch ((t (:foreground ,red :weight bold))))
       '(hl-paren-face ((t (:foreground ,docs :weight bold))))
+
+      ;; dired
       '(dired-directory ((t (:weight bold))))
       '(diredp-file-suffix ((t ())))
       '(diredp-ignored-file-name ((t ())))
+
+      ;; rst
       '(rst-level-1 ((t (:weight bold))))
       '(rst-level-2 ((t (:weight bold))))
       '(rst-level-3 ((t (:weight bold))))
       '(rst-level-4 ((t (:weight bold))))
       '(rst-level-5 ((t (:weight bold))))
       '(rst-level-6 ((t (:weight bold))))
+
+      ;; org-mode
       '(org-document-title ((t (:weight bold))))
       '(org-footnote ((t ())))
-      '(org-level-1 ((t (:foreground ,fg :weight bold))))
-      '(org-level-2 ((t (:foreground ,fg :weight bold))))
-      '(org-level-3 ((t (:foreground ,fg :weight bold))))
-      '(org-level-4 ((t (:foreground ,fg :weight bold))))
-      '(org-level-5 ((t (:foreground ,fg+ :weight bold))))
-      '(org-level-6 ((t (:foreground ,fg+ :weight bold))))
-      '(org-level-7 ((t (:foreground ,fg+ :weight bold))))
-      '(org-level-8 ((t (:foreground ,fg+ :weight bold))))
+      '(org-level-1 ((t (:foreground ,yellow :weight bold))))
+      '(org-level-2 ((t (:foreground ,orange :weight bold))))
+      '(org-level-3 ((t (:foreground ,yellow :weight bold))))
+      '(org-level-4 ((t (:foreground ,green :weight bold))))
+      '(org-level-5 ((t (:foreground ,yellow :weight bold))))
+      '(org-level-6 ((t (:foreground ,orange :weight bold))))
+      '(org-level-7 ((t (:foreground ,yellow :weight bold))))
+      '(org-level-8 ((t (:foreground ,green :weight bold))))
       '(org-date ((t ())))
-      '(org-tag ((t (:foreground ,yellow))))
-      '(org-todo ((t (:foreground ,green))))
+      '(org-tag ((t (:foreground ,orange))))
+      '(org-todo ((t (:foreground ,red))))
       '(org-done ((t (:foreground ,docs))))
       '(org-block ((t ())))
       '(org-block-begin-line ((t (:foreground ,fg+ :height 0.9))))
@@ -132,6 +147,8 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(org-meta-line ((t (:foreground ,fg+ :height 0.9))))
       '(org-document-info-keyword ((t ())))
       '(org-document-info ((t ())))
+
+      ;; FIXME: (find a title)
       '(persp-selected-face ((t (:weight bold))))
       '(proof-tactics-name-face ((t ())))
       '(proof-tacticals-name-face ((t ())))
@@ -149,6 +166,8 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(elixir-atom-face ((t ())))
       '(elixir-attribute-face ((t (:foreground ,docs))))
       '(haskell-pragma-face ((t (:weight bold :foreground ,docs))))
+
+      ;; diff
       '(diff-header ((t (:weight bold))))
       '(diff-context ((t ())))
       '(diff-file-header ((t (:foreground ,docs))))
@@ -158,6 +177,8 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(diff-hl-change ((t (:foreground ,fade :background ,yellow))))
       '(diff-hl-insert ((t (:foreground ,fade :background ,green))))
       '(diff-hl-delete ((t (:foreground ,fade :background ,red))))
+
+      ;; flycheck
       '(flycheck-info ((t (:underline ,green))))
       '(flycheck-error ((t (:underline ,red))))
       '(flycheck-warning ((t (:underline ,orange))))
@@ -167,6 +188,8 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(flyspell-incorrect ((t (:underline ,red))))
       '(flyspell-duplicate ((t (:underline ,orange))))
       '(fringe ((t (()))))
+
+      ;; git/magit
       '(git-commit-summary ((t ())))
       '(git-commit-overlong-summary ((t (:foreground ,red))))
       '(git-commit-nonempty-second-line ((t (:foreground ,red))))
@@ -194,18 +217,22 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(magit-diff-added ((t (:foreground ,green))))
       '(diff-refine-added ((t (:foreground ,bg :background ,green))))
       '(diff-refine-removed ((t (:foreground ,bg :background ,red))))
+
+      ;; markdown
       '(markdown-header-delimiter-face ((t (:foreground ,docs :weight bold))))
-      '(markdown-header-face-1 ((t (:foreground ,fg :weight bold))))
-      '(markdown-header-face-2 ((t (:foreground ,fg :weight bold))))
-      '(markdown-header-face-3 ((t (:foreground ,fg :weight bold))))
-      '(markdown-header-face-4 ((t (:foreground ,fg+ :weight bold))))
-      '(markdown-header-face-5 ((t (:foreground ,fg+ :weight bold))))
-      '(markdown-header-face-6 ((t (:foreground ,fg+ :weight bold))))
+      '(markdown-header-face-1 ((t (:foreground ,yellow :weight bold))))
+      '(markdown-header-face-2 ((t (:foreground ,orange :weight bold))))
+      '(markdown-header-face-3 ((t (:foreground ,yellow :weight bold))))
+      '(markdown-header-face-4 ((t (:foreground ,green :weight bold))))
+      '(markdown-header-face-5 ((t (:foreground ,yellow :weight bold))))
+      '(markdown-header-face-6 ((t (:foreground ,orange :weight bold))))
       '(markdown-markup-face ((t ())))
       '(markdown-bold-face ((t (:weight bold))))
       '(markdown-italic-face ((t (:italic t))))
       '(markdown-link-face ((t ())))
       '(markdown-url-face ((t (:underline t))))
+
+      ;; LaTex
       '(font-latex-warning-face ((t (:slant italic))))
       '(font-latex-bold-face ((t (:weight bold))))
       '(font-latex-sedate-face ((t ())))
@@ -221,6 +248,8 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(font-latex-sectioning-3-face ((t ())))
       '(font-latex-sectioning-4-face ((t ())))
       '(font-latex-sectioning-5-face ((t ())))
+
+      ;; helm
       '(helm-header ((t (:background ,bg+))))
       '(helm-source-header ((t (:background ,bg+))))
       '(helm-match ((t (:weight bold))))
@@ -233,6 +262,8 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(helm-ff-dotted-directory ((t (:weight bold))))
       '(variable-pitch ((t ())))
       '(highlight ((t (:background ,fade))))
+
+      ;; compilation
       '(compilation-warning ((t (:weight bold :underline t))))
       '(compilation-column-number ((t (:underline t))))
       '(company-tooltip ((t (:foreground ,bg :background ,fg+))))
@@ -249,6 +280,8 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(tuareg-font-lock-governing-face ((t ())))
       '(tuareg-font-lock-operator-face ((t ())))
       '(tuareg-font-double-colon-face ((t ())))
+
+      ;; tabs/header
       '(header-line ((t (:background ,current-line :foreground ,fg))))
       '(centaur-tabs-unselected ((t (:background ,current-line :foreground ,fg))))
       '(centaur-tabs-unselected-modified ((t (:background ,current-line :foreground ,fg))))
@@ -256,6 +289,8 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(centaur-tabs-selected-modified ((t (:background ,bg :foreground ,fg))))
       '(centaur-tabs-active-bar-face ((t (:background ,docs))))
       '(focus-unfocused ((t (:foreground ,fade))))
+
+      ;; vterm
       '(vterm ((t (:foreground ,fg))))
       '(vterm-color-black   ((t (:foreground ,docs))))
       '(vterm-color-red     ((t (:foreground ,fg))))
