@@ -106,7 +106,7 @@ ORANGE, YELLOW and GREEN are pretty self-explanatory."
       '(compilation-mode-line-fail ((t (:foreground ,red))))
       '(match ((t (:foreground ,docs :background ,fg+))))
       '(linum ((t (:foreground ,fade))))
-      '(line-number ((t (:foreground ,docs :height 0.8))))
+      '(line-number ((t (:foreground ,docs))))
       '(line-number-current-line ((t (:foreground ,fg))))
       '(hl-line ((t (:background ,current-line))))
       '(show-paren-match ((t (:foreground ,green :weight bold))))
